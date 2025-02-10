@@ -1,0 +1,127 @@
+name: Automation_Snowflake_SQLFailed
+description: test random description
+version: 0.0.1
+author: abhisheks+e2etests@prophecy.io
+language: sql
+buildSystem: ''
+buildSystemDetails: null
+pipelines: {}
+datasets: {}
+templates: {}
+jobs:
+  jobs/sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy_job:
+    name: sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy_job
+    description: Airflow Job
+    fabricUID: 25
+    scheduler:
+      MWAA: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: 0 0 1 5 *
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines: []
+    jobClusterMode:
+      clusterMode:
+        Multi: {}
+      clusterId: null
+    enabled: false
+    createdAt: '2025-02-10 09:41:12'
+    author: abhisheks+e2etests@prophecy.io
+    models: []
+    sqlProjects:
+    - '21444'
+gemContainer:
+  languageVersion: ''
+  gemLibsVersion: ''
+  gems: {}
+  dependencies: null
+functions:
+  author: null
+  createdAt: '2025-02-10 09:36:30'
+  udfs: {}
+  udafs: {}
+  expressions: {}
+  airflowFunctions: {}
+  businessRules: {}
+subgraphs: {}
+sqlModels:
+  .prophecy/metadata/sqlmodels/sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy:
+    name: sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: A
+        dataType:
+          type: String
+      - name: B
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - models/testmodel/sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy.sql
+    - .prophecy/ide/models/sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy.json
+    sqlDependencies:
+      models: []
+      datasets: []
+      seeds: []
+      sources: []
+      snapshots: []
+    createdAt: '2025-02-10 09:37:43'
+sqlSnapshots: {}
+sqlTests: {}
+sqlMacros:
+  .prophecy/metadata/sqlmacros/generate_schema_name:
+    name: generate_schema_name
+    macroType: expression
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - macros/generate_schema_name.sql
+    - .prophecy/ide/macros/generate_schema_name.json
+    createdAt: '2025-02-10 09:36:48'
+sqlSeeds:
+  .prophecy/metadata/sqlseeds/qa_failure_seed:
+    name: qa_failure_seed
+    schema:
+      entityType: ''
+      providerType: Snowflake
+      fields:
+      - name: c_int
+        dataType:
+          type: Number
+      - name: c_bignumeric
+        dataType:
+          type: Number
+      - name: c_string
+        dataType:
+          type: String
+      - name: c_float64
+        dataType:
+          type: Float
+      - name: c_bool
+        dataType:
+          type: String
+    description: null
+    author: abhisheks+e2etests@prophecy.io
+    files:
+    - seeds/qa_failure_seed.csv
+    createdAt: '2025-02-10 09:37:55'
+sqlSources: {}
+sqlUnreferencedSources: {}
+sqlPipeline:
+  name: sqlPipeline
+  description: null
+  author: abhisheks+e2etests@prophecy.io
+  createdAt: '2025-02-10 09:36:30'
+dependencies: []
+projectDependencies: {}
+flags:
+  shouldAddDefaultDependenciesIfAbsent: true
+pipelineConfigurations: {}

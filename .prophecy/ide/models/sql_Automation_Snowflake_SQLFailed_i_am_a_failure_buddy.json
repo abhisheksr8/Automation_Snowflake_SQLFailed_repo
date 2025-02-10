@@ -1,0 +1,217 @@
+{
+  "id" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy",
+  "metainfo" : {
+    "label" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy",
+    "autoLayout" : false,
+    "staleState" : "none",
+    "sourceSuggestions" : {
+      "sources" : [ ]
+    },
+    "version" : 3
+  },
+  "processes" : {
+    "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy##eufn52zJ" : {
+      "id" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy##eufn52zJ",
+      "component" : "TargetModel",
+      "metadata" : {
+        "label" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy",
+        "x" : 20,
+        "y" : 220,
+        "phase" : 0,
+        "macroDependencies" : [ ]
+      },
+      "properties" : {
+        "customQueryDisabled" : true,
+        "customQuery" : false,
+        "incrementalEditorDisabled" : true,
+        "query" : "SELECT * \n\nFROM qa_failures_select\n",
+        "incrementalKey" : false,
+        "incremental" : {
+          "expression" : "true"
+        }
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "suWNUlsh",
+          "slug" : "qa_failures_select"
+        } ],
+        "outputs" : [ {
+          "id" : "vsylU335",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "m0AqVPx9noqPHP-YvOEVA" : {
+      "id" : "m0AqVPx9noqPHP-YvOEVA",
+      "component" : "Seed",
+      "metadata" : {
+        "label" : "qa_failure_seed",
+        "slug" : "qa_failure_seed",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0
+      },
+      "properties" : {
+        "table" : {
+          "name" : "qa_failure_seed",
+          "sourceType" : "Seed",
+          "alias" : ""
+        }
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "0e2j8b0vNtX5VUSuY90cq",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    },
+    "6ZMSmYtXiDElyXZjahw_-$$XWSY4gh_CTVHZ3A2B9MOP" : {
+      "id" : "6ZMSmYtXiDElyXZjahw_-$$XWSY4gh_CTVHZ3A2B9MOP",
+      "component" : "SQLStatement",
+      "metadata" : {
+        "label" : "qa_failures",
+        "slug" : "qa_failures",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Retrieves initial data on quality assurance failures for analysis.",
+        "autoUpdateComment" : true,
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "fileTabs" : [ {
+          "path" : "out",
+          "id" : "out",
+          "language" : "sql",
+          "content" : "select * from qa_failure_seed"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "pIS2DzXVBw51SCoe2ctST$$mhMQaUhRwB1e1ORQpmtK0",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "c_int",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "c_bignumeric",
+              "dataType" : {
+                "type" : "Number"
+              }
+            }, {
+              "name" : "c_string",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "c_float64",
+              "dataType" : {
+                "type" : "Float"
+              }
+            }, {
+              "name" : "c_bool",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "qa_failure_seed"
+        } ],
+        "outputs" : [ {
+          "id" : "rIhW9h5pLea5eVdpDGo4C$$RncVfn7OvgSCeOGVDn8A6",
+          "schema" : {
+            "entityType" : "",
+            "providerType" : "Snowflake",
+            "fields" : [ {
+              "name" : "a",
+              "dataType" : {
+                "type" : "String"
+              }
+            }, {
+              "name" : "b",
+              "dataType" : {
+                "type" : "String"
+              }
+            } ]
+          },
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
+      }
+    },
+    "FbYzwKHhsQ8exI5SSdvDi$$AwbhpRITMKVvNmOnYSqLh" : {
+      "id" : "FbYzwKHhsQ8exI5SSdvDi$$AwbhpRITMKVvNmOnYSqLh",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "qa_failures_select",
+        "slug" : "qa_failures_select",
+        "x" : -420,
+        "y" : -60,
+        "phase" : 0,
+        "macroDependencies" : [ ],
+        "comment" : "Selects specific fields from quality assurance failure records for review.",
+        "autoUpdateComment" : true,
+        "isLabelGrayed" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "2J9ZAgZSh0M63ZqrmzeV_$$UiUBrrr7TLfccJwe2UZhT##a", "2J9ZAgZSh0M63ZqrmzeV_$$UiUBrrr7TLfccJwe2UZhT##b" ],
+        "expressions" : [ {
+          "expression" : {
+            "expression" : "a"
+          },
+          "alias" : "a",
+          "_row_id" : "207231284"
+        }, {
+          "expression" : {
+            "expression" : "b"
+          },
+          "alias" : "b",
+          "_row_id" : "1083375148"
+        } ]
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "2J9ZAgZSh0M63ZqrmzeV_$$UiUBrrr7TLfccJwe2UZhT",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "AKqovpCAFLn3w1XkFtByo$$uRcW2NvoAHjsCAVM6tW_F",
+          "slug" : "out"
+        } ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      }
+    }
+  },
+  "connections" : [ {
+    "id" : "_z65HyU4WdDuh4aRXffT0",
+    "source" : "m0AqVPx9noqPHP-YvOEVA",
+    "sourcePort" : "0e2j8b0vNtX5VUSuY90cq",
+    "target" : "6ZMSmYtXiDElyXZjahw_-$$XWSY4gh_CTVHZ3A2B9MOP",
+    "targetPort" : "pIS2DzXVBw51SCoe2ctST$$mhMQaUhRwB1e1ORQpmtK0"
+  }, {
+    "id" : "5_D9XE4a_u5z_Eu82B5_l",
+    "source" : "6ZMSmYtXiDElyXZjahw_-$$XWSY4gh_CTVHZ3A2B9MOP",
+    "sourcePort" : "rIhW9h5pLea5eVdpDGo4C$$RncVfn7OvgSCeOGVDn8A6",
+    "target" : "FbYzwKHhsQ8exI5SSdvDi$$AwbhpRITMKVvNmOnYSqLh",
+    "targetPort" : "2J9ZAgZSh0M63ZqrmzeV_$$UiUBrrr7TLfccJwe2UZhT"
+  }, {
+    "id" : "ySqPudB2mmSNwXDJ1DRyT",
+    "source" : "FbYzwKHhsQ8exI5SSdvDi$$AwbhpRITMKVvNmOnYSqLh",
+    "sourcePort" : "AKqovpCAFLn3w1XkFtByo$$uRcW2NvoAHjsCAVM6tW_F",
+    "target" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy##eufn52zJ",
+    "targetPort" : "suWNUlsh"
+  } ],
+  "component" : "Model"
+}
