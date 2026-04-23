@@ -1,0 +1,147 @@
+{
+  "metainfo" : {
+    "type" : "MWAA",
+    "fabricId" : "20",
+    "jobId" : "jobs/sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy_job",
+    "name" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy_job",
+    "dagName" : "regression1_abhisheks_e2etests_Automation_Snowflake_SQLFailed_sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy_job",
+    "schedule" : "0 0 1 5 *",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false,
+      "onDurationWarningThresholdExceeded" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "retries" : 0,
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false,
+      "emr_serverless" : false
+    }
+  },
+  "processes" : {
+    "Ii6BxaDU0RnWZEdrTfUQJ$$YKVKDxy_UrSa1v_z2lCnV" : {
+      "id" : "Ii6BxaDU0RnWZEdrTfUQJ$$YKVKDxy_UrSa1v_z2lCnV",
+      "component" : "Model",
+      "metadata" : {
+        "label" : "Model_0",
+        "slug" : "Model_0",
+        "x" : -140,
+        "y" : -140
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "eJkSgkOv_MngjsnFxPZ2c$$Y7y5vXpJ9K8TyxHHph2LY",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "cZrSc21iLbj_pJhmwxIlU$$Lowp3JWC4pM9rTigjr-bv",
+          "slug" : ""
+        } ]
+      },
+      "settings" : {
+        "retries" : 1,
+        "max_retry_delay" : 1
+      },
+      "properties" : {
+        "entityId" : null,
+        "cacheSelectedOnly" : null,
+        "gitSubPath" : null,
+        "runModelWithParents" : false,
+        "defer" : null,
+        "projectConfig" : null,
+        "noDefer" : null,
+        "runSeed" : true,
+        "gitEntity" : "branch",
+        "noPartialParse" : null,
+        "model" : null,
+        "warnErrorOptions" : null,
+        "gitTokenSecret" : null,
+        "state" : null,
+        "useExperimentalParser" : null,
+        "currentProjectSnapshots" : null,
+        "gitSshUrl" : null,
+        "indirectSelection" : null,
+        "partialParse" : null,
+        "vars" : null,
+        "isAdhocRunFromSameProject" : null,
+        "customVersion" : true,
+        "noPrint" : null,
+        "quiet" : null,
+        "projectId" : "29243",
+        "orchestratorAirflowConnectionId" : null,
+        "runMode" : "project",
+        "runOnlyModel" : false,
+        "favorState" : null,
+        "failFast" : null,
+        "noStaticParser" : null,
+        "loadingModels" : false,
+        "runTest" : true,
+        "select" : null,
+        "recordTimingInfo" : null,
+        "fullRefresh" : true,
+        "entityName" : null,
+        "noCacheSelectedOnly" : null,
+        "gitEntityValueTag" : null,
+        "noFavorState" : null,
+        "snapshot" : null,
+        "isProphecyManaged" : false,
+        "profile" : null,
+        "noVersionCheck" : null,
+        "noWriteJson" : null,
+        "printerWidth" : null,
+        "sqlFabricId" : "5",
+        "gitEntityValue" : "testBranch",
+        "logFormat" : null,
+        "runModelWithChildren" : false,
+        "dbtProfileSecret" : null,
+        "gitEntityValueCommit" : null,
+        "target" : null,
+        "exclude" : null,
+        "runDeps" : null,
+        "sqlProjectType" : "snowflake",
+        "loadingSnapshots" : false,
+        "gitEntityValueBranch" : "testBranch",
+        "noAnonymousUsageStats" : true,
+        "selector" : null,
+        "targetPath" : null,
+        "threads" : null,
+        "warnError" : null,
+        "currentProjectModels" : [ {
+          "label" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy",
+          "value" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy",
+          "id" : "29243/.prophecy/metadata/sqlmodels/sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy",
+          "name" : "sql_Automation_Snowflake_SQLFailed_i_am_a_failure_buddy"
+        } ],
+        "profilesDir" : null,
+        "taskId" : null,
+        "logPath" : null,
+        "storeFailures" : null,
+        "entityKind" : null
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ ]
+}
